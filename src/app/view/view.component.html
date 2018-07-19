@@ -1,5 +1,10 @@
-<mat-card>
-
+<mat-card >
+  <div class="top">
+    <mat-form-field>
+        <input matInput [(ngModel)]="searchText" placeholder="Search">
+      </mat-form-field>
+     
+  </div>
 
 <div *ngIf="persons.length==0">
   No records found
@@ -14,7 +19,7 @@
       <th>Address 2</th>
       <th>Postal Code</th>
     </tr>
-    <tr *ngFor="let person of persons">
+    <tr *ngFor="let person of persons| filter:searchText">
       <td>{{person.id}}</td>
       <td>{{person.name}}</td>
       <td>{{person.phone| phonePipe}}</td>

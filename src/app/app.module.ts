@@ -9,11 +9,12 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.routes';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FilterPipe } from './view/filter.pipe';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { MaterialModule } from './app.material';
 @NgModule({
   declarations: [
-    AppComponent,PhonePipe, ViewComponent, AddComponent, EditComponent
+    AppComponent,PhonePipe,FilterPipe, ViewComponent, AddComponent, EditComponent
   ],
   imports: [
     FormsModule,
