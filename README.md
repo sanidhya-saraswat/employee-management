@@ -2,24 +2,19 @@
 Created by Sanidhya Saraswat
 Ph: 9424038133
 
-
 Live Demo: https://employeemanagement1.herokuapp.com
 
-This git repo consists of 2 folders namely `front` and `back`.
+**Description**
 
-->`front` folder consists of the front-end code of the project written in **Angular 6**.
-
-->`back` folder consists of the back-end code of the project written in **Node.js**
+This project is written in Angular 6. As requested, there is no backend for this project. If you want, I can create the backend also in Node.js to make it a complete Full Stack application.
 
 **How to Run**
 (Assuming you have **npm** installed)
 
 1) Clone this repo.
 
-2) Go to `back` folder.
+2) run the command `npm install` in the root folder of the project.
 
-3) run the command `npm install`
+3) then run `npm start`
 
-4) run the command `node app.js`
-
-5) go to  URL http://localhost:3000
+4) go to  URL http://localhost:4200
