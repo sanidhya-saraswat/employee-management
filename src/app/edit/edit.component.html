@@ -1,34 +1,33 @@
 <mat-card>
     <h3>Edit Employee</h3>
- <!-- Currently I am using HTML5 Native Form validations and not Angular Forms/ReactiveForms validations since the validations requested are simple enough and does not need any additional customization-->
- 
+
     <form (ngSubmit)="onFormSubmit()" [formGroup]="editForm">
-            <mat-form-field>
-                    <input matInput  formControlName="id" placeholder="Id" readonly>
-                </mat-form-field>
         <mat-form-field>
-            <input matInput  formControlName="name" placeholder="Name">
+            <input matInput formControlName="id" placeholder="Id" readonly>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput formControlName="name" placeholder="Name">
             <mat-error *ngIf="editForm.get('name').hasError('required')">
                 Name is required
-              </mat-error>
-              <mat-error *ngIf="editForm.get('name').hasError('pattern')">
+            </mat-error>
+            <mat-error *ngIf="editForm.get('name').hasError('pattern')">
                 Minimum length is 4 characters
-              </mat-error>
+            </mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input matInput   formControlName="phone" placeholder="Phone">
+            <input matInput formControlName="phone" placeholder="Phone">
             <mat-error *ngIf="editForm.get('phone').hasError('required')">
                 Phone is required
-              </mat-error>
-              <mat-error *ngIf="editForm.get('phone').hasError('pattern')">
+            </mat-error>
+            <mat-error *ngIf="editForm.get('phone').hasError('pattern')">
                 Only numbers are accepted
-              </mat-error>
+            </mat-error>
         </mat-form-field>
         <mat-form-field>
-            <input matInput   formControlName="city" placeholder="City">
+            <input matInput formControlName="city" placeholder="City">
         </mat-form-field>
         <mat-form-field>
-            <input matInput   formControlName="addressLine1" placeholder="Address Line 1">
+            <input matInput formControlName="addressLine1" placeholder="Address Line 1">
         </mat-form-field>
         <mat-form-field>
             <input matInput formControlName="addressLine2" placeholder="Address Line 2">
@@ -37,8 +36,8 @@
             <input matInput formControlName="postalCode" placeholder="Postal Code">
         </mat-form-field>
         <div>
-                <button type="submit" mat-raised-button color="primary" [disabled]="editForm.invalid==true">Edit</button>
-                <button  mat-stroked-button color="primary" (click)="goBack()">Go Back</button>
-            </div>
+            <button type="submit" mat-raised-button color="primary" [disabled]="editForm.invalid==true">Edit</button>
+            <button mat-stroked-button color="primary" (click)="goBack()">Go Back</button>
+        </div>
     </form>
 </mat-card>

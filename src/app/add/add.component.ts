@@ -10,7 +10,7 @@ import { CommonService } from '../common.service';
 export class AddComponent implements OnInit {
 
   constructor(private commonService:CommonService) { }
-addForm;
+addForm:FormGroup;
   ngOnInit() {
     this.addForm = new FormGroup({
       name:new FormControl('',[Validators.required,Validators.pattern(/^.{4,}$/)]),
