@@ -3,7 +3,7 @@
     <mat-form-field>
         <input matInput [(ngModel)]="searchText" placeholder="Search">
       </mat-form-field>
-     
+      <button mat-raised-button color="primary" (click)="add()">Add New</button>
   </div>
 
 <div *ngIf="persons.length==0">
@@ -18,6 +18,7 @@
       <th>Address 1</th>
       <th>Address 2</th>
       <th>Postal Code</th>
+      <th>Edit</th>
     </tr>
     <tr *ngFor="let person of persons| filter:searchText">
       <td>{{person.id}}</td>
@@ -27,6 +28,7 @@
       <td>{{person.address.address_line1}}</td>
       <td>{{person.address.address_line2}}</td>
       <td>{{person.address.postal_code}}</td>
+      <td><button mat-stroked-button color="primary" (click)="edit(person.id)">Edit</button></td>
     </tr>
   </table>
 </mat-card>

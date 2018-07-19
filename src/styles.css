@@ -3,4 +3,9 @@
 body
 {
     font-family: 'Roboto', sans-serif;
+    background: rgb(248, 248, 248)
+}
+mat-card
+{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23) !important
 }

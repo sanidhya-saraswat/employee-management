@@ -1,0 +1,15 @@
+form{
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+}
+form div
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+button
+{
+    min-width: 120px;
+}

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Employee } from '../employee.interface';
-import { CommonService } from '../common.service';
+import { CommonService, Employee } from '../common.service';
 
 @Component({
   selector: 'app-view',
@@ -21,7 +20,14 @@ export class ViewComponent implements OnInit {
    getData()
    {
      //ideally this method should send a REST API request to server to get data. But for now, just getting the data from service.
- this.persons=this.commonService.getData();
+ this.persons=this.commonService.getAllData();
    }
-
+add()
+{
+  this.commonService.goTo('/employees/add')
+}
+edit(val)
+{
+  this.commonService.goTo(`employees/${val}/edit`)
+}
 }

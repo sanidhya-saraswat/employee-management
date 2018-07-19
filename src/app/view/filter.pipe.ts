@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Employee } from '../employee.interface';
+import { Employee } from '../common.service';
 @Pipe({ name: 'filter' })
 export class FilterPipe implements PipeTransform {
     transform(items: Employee[], searchText: string) {
