@@ -1,0 +1,27 @@
+<mat-card>
+
+
+<div *ngIf="persons.length==0">
+  No records found
+</div>
+<table *ngIf="persons.length">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>City</th>
+      <th>Address 1</th>
+      <th>Address 2</th>
+      <th>Postal Code</th>
+    </tr>
+    <tr *ngFor="let person of persons">
+      <td>{{person.id}}</td>
+      <td>{{person.name}}</td>
+      <td>{{person.phone| phonePipe}}</td>
+      <td>{{person.address.city}}</td>
+      <td>{{person.address.address_line1}}</td>
+      <td>{{person.address.address_line2}}</td>
+      <td>{{person.address.postal_code}}</td>
+    </tr>
+  </table>
+</mat-card>
