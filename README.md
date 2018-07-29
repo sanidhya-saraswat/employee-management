@@ -7,6 +7,7 @@ Live Demo: https://employeemanagement1.herokuapp.com
 **Description**
 
 This project is made in Angular 6. As I  discussed with the concerned person, I did NOT create a backend for this project for now.
+
 **How to Run**
 (Assuming you have **npm** installed)
 
